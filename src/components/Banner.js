@@ -10,7 +10,7 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Étudiant", "Alternant", "Assistant Développeur" ];
+  const toRotate = [ "Étudiant", "Alternant" ];
   const period = 2000;
 
   useEffect(() => {
@@ -54,8 +54,8 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <span className="tagline">Bienvenue !</span>
-                <h1>{`Salut! Je suis Noah`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Développeur d applications" ]'><span className="wrap">{text}</span></span></h1>
+                <span className="tagline">Bienvenue sur mon portfolio !</span>
+                <h1>{`Je suis Noah, `} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Etudiant", "Alternant" ]'><span className="wrap">{text}</span></span></h1>
                   <p>Je suis à la recherche d'une école pour poursuivre mes études dans le développement informatique. Mon objectif est de progresser et de me professionnaliser  dans le développement d'applications.</p>
               </div>}
             </TrackVisibility>

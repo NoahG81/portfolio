@@ -349,7 +349,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .timeline-container h3{
-  font-size: 23px;
+  font-size: 27px;
+}
+
+@media screen and (max-width: 768px) {
+  .timeline-container h3 {
+    font-size: 18px;
+  }
 }
 
 .timeline-container h2{
@@ -615,6 +621,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .footer .social-icon{
   margin-top: 220px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer .social-icon{
+    margin-top: 250px;
+  }
 }
 
 .footer .footer-logo {
