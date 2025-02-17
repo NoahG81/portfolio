@@ -25,7 +25,7 @@ export const Parcours = () => {
   ];
 
   return (
-    <div className="timeline-container">
+    <div className="timeline-container" id="parcours">
       <h2>Parcours scolaire</h2>
       <div className="timeline">
         {parcours.map((etape, index) => (
