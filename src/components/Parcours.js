@@ -20,7 +20,7 @@ export const Parcours = () => {
       title: "BUT Informatique",
       checkpoint: "",
       description:
-        "Parcours : Réalisation d'application. \nAlternance : Développeur back-end chez Fnac-Darty.",
+        "Parcours : Réalisation d'applications. \nAlternance : Développeur back-end chez Fnac-Darty.",
     },
   ];
 

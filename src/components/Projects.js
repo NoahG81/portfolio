@@ -39,7 +39,7 @@ export const Projects = () => {
       description: "Développement d'application",
       imgUrl: semantix,
       modalText: "Le principe de ce jeu est simple. Nous avons 2 mots au départ tirés aléatoirement. Un score de similarité " + 
-      "est alors calculé entre ces 2 mots. Le but est d'ajouté de plus en plus de mots proche de ces 2 mots pour réduire le score.",
+      "est alors calculé entre ces 2 mots. Le but est d'ajouter de plus en plus de mots proches de ces 2 mots pour réduire le score.",
       icons: [js, sql, java, html, css, c, php]
     },
     {
@@ -54,8 +54,8 @@ export const Projects = () => {
       description: "Développement d'application",
       imgUrl: backpack,
       modalText: "Le jeu se déroule dans un donjon et le but est d'arriver au dernière étage. " +
-      "Dans chacun des étages se trouve des ennemies, des guérisseurs et bien plus encore. " +
-      "Nous avons développé un système de sac a dos qui peut contenir les différents objets. " +
+      "Dans chacun des étages se trouvent des ennemis, des guérisseurs et bien plus encore. " +
+      "Nous avons développé un système de sac à dos qui peut contenir les différents objets. " +
       "Étant donné la grandeur du projet, il fallait optimiser au maximum le code pour que le jeu ne soit pas trop lent.",
       icons: [java]
     },
@@ -66,7 +66,7 @@ export const Projects = () => {
       title: "Site web Darty.com",
       description: "Développement web",
       imgUrl: darty,
-      modalText: "Assistant développeur Java en alternance chez Fnac darty. Développement et maintenance du back-end du site web Darty.",
+      modalText: "Assistant développeur Java en alternance chez Fnac Darty. Développement et maintenance du back-end du site web Darty.",
       icons: [java, sql]
     },
   ];
