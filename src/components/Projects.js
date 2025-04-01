@@ -22,6 +22,15 @@ export const Projects = () => {
   const [showModal, setShowModal] = useState(false);
   const [modalContent, setModalContent] = useState({});
 
+  const skillColors = {
+    "Réaliser": "#FF0000",
+    "Optimiser": "#800080",
+    "Administrer": "#FFD700",
+    "Gérer": "#008000",
+    "Conduire": "#0000FF",
+    "Collaborer": "#808080"
+  };
+
   const projects = [
     {
       title: "Green Circle",
@@ -32,7 +41,8 @@ export const Projects = () => {
       "un système d'e-learning pour former les entreprises partenaires sur l'économie circulaire, " +
       "un système de gestion d'évenements ainsi qu'un forum de discussion pour les utilisateurs." +
       " Un chatbot a aussi été mis en place dans ce projet pour aider les utilisateurs à naviguer sur le site.",
-      icons: [js, sql, python, html, css]
+      icons: [js, sql, python, html, css],
+      skills: ["Réaliser", "Optimiser", "Collaborer"]
     },
     {
       title: "Semantix",
@@ -40,14 +50,16 @@ export const Projects = () => {
       imgUrl: semantix,
       modalText: "Le principe de ce jeu est simple. Nous avons 2 mots au départ tirés aléatoirement. Un score de similarité " + 
       "est alors calculé entre ces 2 mots. Le but est d'ajouter de plus en plus de mots proches de ces 2 mots pour réduire le score.",
-      icons: [js, sql, java, html, css, c, php]
+      icons: [js, sql, java, html, css, c, php],
+      skills: ["Réaliser", "Optimiser", "Administrer", "Gérer", "Conduire", "Collaborer"]
     },
     {
       title: "UNESCO",
       description: "Développement web",
       imgUrl: unesco,
       modalText: "Ce projet est un site web interactif pour l'UNESCO, promouvant la culture et le patrimoine de la ville de Tolède.",
-      icons: [html, css]
+      icons: [html, css],
+      skills: ["Réaliser", "Gérer", "Conduire", "Collaborer"]
     },
     {
       title: "Backpack Hero",
@@ -57,7 +69,8 @@ export const Projects = () => {
       "Dans chacun des étages se trouvent des ennemis, des guérisseurs et bien plus encore. " +
       "Nous avons développé un système de sac à dos qui peut contenir les différents objets. " +
       "Étant donné la grandeur du projet, il fallait optimiser au maximum le code pour que le jeu ne soit pas trop lent.",
-      icons: [java]
+      icons: [java],
+      skills: ["Réaliser", "Optimiser", "Collaborer"]
     },
   ];
 
@@ -67,7 +80,8 @@ export const Projects = () => {
       description: "Développement web",
       imgUrl: darty,
       modalText: "Assistant développeur Java en alternance chez Fnac Darty. Développement et maintenance du back-end du site web Darty.",
-      icons: [java, sql]
+      icons: [java, sql],
+      skills: ["Réaliser", "Optimiser", "Administrer", "Gérer", "Collaborer"]
     },
   ];
 
@@ -146,6 +160,22 @@ export const Projects = () => {
           <div className="icon-container">
             {modalContent.icons && modalContent.icons.map((icon, index) => (
               <img key={index} src={icon} alt={`icon-${index}`} className="project-icon" />
+            ))}
+          </div>
+          <div className="skills-container" style={{ marginTop: '10px' }}>
+            {modalContent.skills && modalContent.skills.map((skill, index) => (
+              <Button
+                key={index}
+                style={{ 
+                  backgroundColor: skillColors[skill], 
+                  border: 'none', 
+                  color: 'white', 
+                  margin: '5px', 
+                  boxShadow: `0px 0px 10px 2px ${skillColors[skill]}`
+                }}
+              >
+                {skill.charAt(0).toUpperCase() + skill.slice(1)}
+              </Button>
             ))}
           </div>
         </Modal.Body>
